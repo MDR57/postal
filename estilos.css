@@ -1,0 +1,159 @@
+/* Estilo general */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color:rgb(121, 13, 13); /* Fondo rojo */
+}
+
+/* Fondo general */
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.moon {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.sleigh {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 200px;
+    height: 100px;
+    background-size: contain;
+}
+
+h1 {
+    text-align: center;
+    height: 30%;
+    position: absolute;
+    bottom: 15%;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo de los copos de nieve */
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10%;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall infinite linear;
+}
+
+/* Copos de nieve animados con duraciones diferentes */
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+.snowflake:nth-child(2) {
+    left: 25%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+.snowflake:nth-child(3) {
+    left: 40%;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+}
+.snowflake:nth-child(4) {
+    left: 55%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+.snowflake:nth-child(5) {
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 1.5s;
+}
+.snowflake:nth-child(6) {
+    left: 85%;
+    animation-duration: 6s;
+    animation-delay: 0.2s;
+}
+.snowflake:nth-child(7) {
+    left: 15%;
+    animation-duration: 8s;
+    animation-delay: 1.8s;
+}
+.snowflake:nth-child(8) {
+    left: 35%;
+    animation-duration: 5.5s;
+    animation-delay: 0.4s;
+}
+.snowflake:nth-child(9) {
+    left: 60%;
+    animation-duration: 4.5s;
+    animation-delay: 1.2s;
+}
+.snowflake:nth-child(10) {
+    left: 90%;
+    animation-duration: 6.5s;
+    animation-delay: 0.7s;
+}
+
+/* Animación de caída */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+.boton{
+    font-size: 50px; 
+    padding: 50px 80px; 
+    border-radius: 20px; 
+    background-color: #007BFF; 
+    color: white; 
+    border: solid black 2px; 
+}
+button{
+    font-size: 50px; 
+    padding: 50px 80px; 
+    border-radius: 20px; 
+    color: rgb(0, 0, 0); 
+    border: solid black 2px; 
+    cursor: pointer; 
+}
+.imagen{
+    transform: translate(-1%, -150%) scale(2.5); 
+    z-index: 2; 
+    position: absolute
+
+}
