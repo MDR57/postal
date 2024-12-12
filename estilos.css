@@ -152,8 +152,13 @@ button{
     cursor: pointer; 
 }
 .imagen{
-    transform: translate(-1%, -150%) scale(2.5); 
+    /* transform: translate(-1%, -150%) scale(2);  */
     z-index: 2; 
-    position: absolute
-
+    position: absolute;
+    animation: bounce ease 1s infinite;
+}
+@keyframes bounce{
+    0% { transform: translateY(-350px) scale(2); }
+    50% { transform: translateY(-400px) scale(2); }
+    100% { transform: translateY(-350px) scale(2); }
 }
